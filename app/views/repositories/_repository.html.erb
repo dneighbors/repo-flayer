@@ -3,7 +3,7 @@
     <%= repository.name %>
   </th>
   <td class="px-6 py-4">
-    <%= repository.description %>
+    <%= truncate(repository.description, length: 30) %>
   </td>
   <td class="px-6 py-4">
     &nbsp;
