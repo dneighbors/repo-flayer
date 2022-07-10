@@ -1,6 +1,8 @@
 <p style="color: green"><%= notice %></p>
 
-<h1>Repositories</h1>
+<h1>
+  Repositories
+</h1>
 
 <div id="repositories">
   <% @repositories.each do |repository| %>
@@ -12,3 +14,4 @@
 </div>
 
 <%= link_to "New repository", new_repository_path %>
+
