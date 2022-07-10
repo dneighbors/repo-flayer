@@ -1,17 +1,18 @@
-<div id="<%= dom_id repository %>">
-  <p class="my-5">
-    <strong class="block font-medium mb-1">Name:</strong>
+<tr id="<%= dom_id repository %>" class="bg-white dark:bg-gray-800">
+  <th scope="row" class="px-6 py-4 font-medium text-gray-900 dark:text-white whitespace-nowrap">
     <%= repository.name %>
-  </p>
-
-  <p class="my-5">
-    <strong class="block font-medium mb-1">Description:</strong>
+  </th>
+  <td class="px-6 py-4">
     <%= repository.description %>
-  </p>
-
-  <% if action_name != "show" %>
-    <%= link_to "Show this repository", repository, class: "rounded-lg py-3 px-5 bg-gray-100 inline-block font-medium" %>
-    <%= link_to 'Edit this repository', edit_repository_path(repository), class: "rounded-lg py-3 ml-2 px-5 bg-gray-100 inline-block font-medium" %>
-    <hr class="mt-6">
-  <% end %>
-</div>
+  </td>
+  <td class="px-6 py-4">
+    &nbsp;
+  </td>
+  <td class="px-6 py-4">
+    &nbsp;
+  </td>
+  <td class="px-6 py-4 text-right">
+    <%= link_to "Show", repository, class: "font-medium text-blue-600 dark:text-blue-500 hover:underline" %> |
+    <%= link_to 'Edit', edit_repository_path(repository), class: "font-medium text-blue-600 dark:text-blue-500 hover:underline" %>
+  </td>
+</tr>
