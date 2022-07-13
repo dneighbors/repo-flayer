@@ -28,4 +28,11 @@ class Repository < ApplicationRecord
     end
 
   end
+
+  def get_readme
+    Octokit.auto_paginate = true
+    octo_client = Octokit::Client.new(:access_token => Rails.application.credentials.github[:token])
+    octo_client.readme(self.full_name)
+  end
+
 end
