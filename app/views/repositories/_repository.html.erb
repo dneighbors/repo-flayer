@@ -6,7 +6,7 @@
     <%= truncate(repository.description, length: 30) %>
   </td>
   <td class="px-6 py-4">
-    <%= repository.github_updated_at %>
+    <%= repository.github_updated_at.in_time_zone('MST').strftime('%m/%d/%Y %I:%M %p %Z') %>
   </td>
   <td class="px-6 py-4">
     <%= repository.default_branch %>&nbsp;
