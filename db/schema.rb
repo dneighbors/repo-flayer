@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 2022_07_10_045945) do
+ActiveRecord::Schema[7.0].define(version: 2022_07_13_052932) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
@@ -19,6 +19,13 @@ ActiveRecord::Schema[7.0].define(version: 2022_07_10_045945) do
     t.string "description"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.integer "github_id"
+    t.string "full_name"
+    t.boolean "private"
+    t.datetime "github_created_at"
+    t.datetime "github_updated_at"
+    t.datetime "github_push_at"
+    t.string "default_branch"
   end
 
 end
