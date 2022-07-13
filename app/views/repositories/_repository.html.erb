@@ -6,10 +6,10 @@
     <%= truncate(repository.description, length: 30) %>
   </td>
   <td class="px-6 py-4">
-    &nbsp;
+    <%= repository.github_updated_at %>
   </td>
   <td class="px-6 py-4">
-    &nbsp;
+    <%= repository.default_branch %>&nbsp;
   </td>
   <td class="px-6 py-4 text-right">
     <%= link_to "Show", repository, class: "font-medium text-blue-600 dark:text-blue-500 hover:underline" %> |
